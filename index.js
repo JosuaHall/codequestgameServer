@@ -1,18 +1,21 @@
 const express = require("express");
 require("dotenv").config();
 const mongoose = require("mongoose");
-//const cors = require("cors");
-
 const challanges = require("./routes/api/challanges");
 
+const cors = require("cors");
 const app = express();
 
-/*const corsOptions = {
-  origin: ["http://localhost:3000", "*"],
+const corsOptions = {
+  origin: [
+    "https://codequestgameadminstmu.netlify.app/",
+    "https://codequestgamestmu.netlify.app/",
+  ],
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
-app.use(cors(corsOptions));*/
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
