@@ -7,7 +7,10 @@ const cors = require("cors");
 const app = express();
 
 const corsOptions = {
-  origin: ["*"],
+  origin: [
+    "https://codequestgamestmu.netlify.app",
+    "https://codequestgameadminstmu.netlify.app",
+  ],
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
